@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" href="../js/bootstrap.min.js"></script>
+  <title>Cadatro de professores</title>
+</head>
+
+<body>
+
+  <dir class="container">
+    <div class="row">
+      <div class="box">
+        <div class="container">
+          <div class="row">
+            <div class="subtitulo">
+              <h2>Cadastrar Professores</h2>
+              <p>_______________________________</p>
+              <!--essa é a tag para fazer esse risco <hr>-->
+            </div>
+          </div>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-group campoLogin" id="nome" placeholder="Jacinto Pinto">
+          </div>
+          <div class="form-group">
+            <label for="curso">Curso</label>
+            <select name="curso" id="curso" class="form-group campoLogin">
+            <option id="tads">TADS</option>
+            </select><br>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-group campoLogin" id="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Senha</label>
+            <input type="password" class="campoLogin" id="senha" placeholder="Password">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox"> Administrador</label>
+          </div>
+          <button type="submit" class="botao">Enviar</button>
+      </div>
+      </form>
+    </div>
+  </dir>
+
+</body>
+
+</html>
