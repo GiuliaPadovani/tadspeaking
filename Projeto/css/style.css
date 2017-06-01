@@ -1,3 +1,6 @@
+/*Atenção para classes já existentes clã*/
+
+/*nao to conseguindo pegar ela por css, se alguem conseguir consertar I'll be happy - Giulia*/
 @font-face {
     font-family: SweetSensation;
     src: url(../fonts/sweet-sensation/sweet-sensations.ttf);
@@ -12,7 +15,7 @@ body {
 	font-family: OpenSans;
 }
 
-.formulario {
+.formularioLogin {
 	padding-bottom: 5%;
 	background-color: #e6e6e6;
 	text-align: center;
@@ -25,6 +28,7 @@ body {
 	box-shadow: 1px 1px 1px #ccc;
 }
 
+/*usar para qualquer subtitulo*/
 .subtitulo {
 	font-family: OpenSans;
 	font-weight: 800;
@@ -36,16 +40,20 @@ body {
 	margin-top: 10%;
 }
 
-.campoLogin {
-	width: 50%;	
+/*eu mudei um pouco o css. quando for fazer qualquer input="text", use a classe .campo*/
+.campo {	
 	padding: 5px;
 	border-radius: 3px;
 	background-color: #F8F5FF;
 	border-style: none;
 }
 
+.campoLogin {
+	width: 50%;
+}
+
+/*alterei aqui tbm.*/
 .botao {
-	background-color: #8c3265;
 	color: #e6e6e6;
 	width: 18%;
 	padding: 5px;
@@ -56,16 +64,31 @@ body {
 	transition: all 0.3s;
 }
 
+.login .botao {
+	background-color: #8c3265;
+}
+
 .botao:hover{
 	box-shadow: 2px 2px 2px 2px #8C8372;
 }
 
+@media screen and (max-width: 600px){/*iphone*/
+	.campoLogin{
+		width: 100%;
+	}
+
+	.botao {
+		width: 70%;
+	}
+
+}
+
+/*inicio menu*/
 .menu img {
     margin-right: 20px;
 }
 
 .menu {
-    position:fixed;
     top:0;
     z-index:10;
     background: #e6e6e6;
@@ -98,4 +121,92 @@ body {
 
 .tads {
 	width: 50%;
+}
+/*fim menu*/
+
+/*use quanod quiser deixar qualquer bloco <p> ou <hn> como inline*/
+.textoInline {
+	display: inline-block;
+}
+
+/*use para centralizar*/
+.center {
+	text-align: center;
+}
+
+.cadastrar .campo {
+	width: 50%;
+	margin-left: 10%;
+}
+
+.textoForm {
+	width: 13%;
+	display: inline-block;
+}
+
+
+.cadastrar .botao {
+	background-color: #5AAD5A;
+	width: 60%;
+	margin-top: 50%;
+	color: #fff;
+}
+
+#exercicio .botao {
+	margin-top: 180%;
+}
+
+.cadastrar .minititulo {
+	margin-top: 5%;
+}
+
+@media screen and (max-width: 600px){/*iphone*/
+	.cadastrar .campo {
+		width: 100%;
+		display: block;
+		margin-left: 0;
+	}
+
+	.cadastrar .botao {
+		width: 50%;
+		margin-top: 10%;
+		margin-left: 50%;
+	}
+}
+
+hr {
+	margin-top: 5%;
+}
+
+.book {
+	margin: 0 5px 0 5px;
+}
+
+.mostraExercicios{
+	margin-top: 4%;
+}
+
+.ex, .options {
+	margin-top: 1%;
+}
+
+.author {
+	margin-left: 70%;
+}
+
+.icon {
+	margin-left: 20px;
+	transition: all 0.5s;
+}
+
+.icon:hover {
+	font-size: 20px;
+}
+
+.acertos {
+	color: green;
+}
+
+.erros {
+	color: red;
 }
