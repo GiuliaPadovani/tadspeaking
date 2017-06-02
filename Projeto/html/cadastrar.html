@@ -22,19 +22,19 @@
 			         <span class = "icon-bar"></span>
 			      </button>
 			      <span class="logo">
-			        <img class="tads" src="../images/tads.png">
+			        <img class="tads" src="../images/tads2.png">
 			      </span>
 			   </div>
 			   <div class = "collapse navbar-collapse" id = "navbar-collapse">
 			      <ul class = "nav navbar-nav navbar-right navegar">
 			        <li><a href="#">Home</a></li>
-			        <li><a href="#">Exercícios Populares</a></li>
+			        <li><a href="exercicios_populares.html">Exercícios Populares</a></li>
 			        <li class="dropdown">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
-			            <ul class="dropdown-menu">
+			            <!--<ul class="dropdown-menu">
 			                <li><a href="#">TADS</a></li>
 			                <li><a href="#">TCI</a></li>
-			            </ul>
+			            </ul>-->
 			        </li>
 			        <li><a href="#">LogOut</a></li>
 			      </ul>
@@ -42,128 +42,131 @@
 			</nav>
 		</header>
 		<!--FIM MENU-->
-		<div class="cadastrar">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 center">
-						<div class="subtitulo">
-							<h2>Cadastrar</h2>
-							<p class="textoInline">_______________</p><i class="fa fa-book book" aria-hidden="true"></i><p class="textoInline">_______________</p>
-						</div>
-						<a href="#curso">Curso</a>
-						<h5 class="textoInline">|</h5>
-						<a href="#disciplina">Disciplina</a>
-						<h5 class="textoInline">|</h5>
-						<a href="#assunto">Assunto</a>
-						<h5 class="textoInline">|</h5>
-						<a href="#exercicio">Exercício</a>
-					</div>
-				</div>
-				<div class="row" id="curso">
-					<div class="col-md-8">
-						<div class="minititulo">
-							<h3>Curso</h3>
-						</div>
-						<form class="cadastro">
-							<div class="textoForm">
-								<h5 class="textoInline">Nome:</h5>
-							</div><input type="text" class="campo" name="curso">
-							<br>
-							<div class="textoForm">
-								<h5 class="textoInline">Instituição:</h5>
-							</div><input type="text" class="campo" name="lugar">
-						</form>
-					</div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
-						<input type="submit" name="botao" value="Criar" class="botao">
-					</div>
-				</div>
-				<hr>
-				<div class="row" id="disciplina">
-					<div class="col-md-8">
-						<div class="minititulo">
-							<h3>Disciplina</h3>
-						</div>
-						<form class="cadastro">
-							<div class="textoForm">
-								<h5 class="textoInline">Nome:</h5>
-							</div><input type="text" class="campo" name="disciplina">
-							<br>
-							<div class="textoForm">
-								<h5 class="textoInline">Curso:</h5>
+		<div class="container-fluid cadastrar">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 biggerBox">
+					<div class="row">
+						<div class="col-md-12 center">
+							<div class="subtitulo">
+								<h2>Cadastrar</h2>
+								<p class="textoInline">_______________</p><i class="fa fa-book book" aria-hidden="true"></i><p class="textoInline">_______________</p>
 							</div>
-							<select class="campo" name="curso" form="cadastro">
-								<option value="tads">TADS</option>
-								<option value="letras">Letras</option>
-							</select>
-						</form>
-					</div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
-						<input type="submit" name="botao" value="Criar" class="botao">
-					</div>
-				</div>
-				<hr>
-				<div class="row" id="assunto">
-					<div class="col-md-8">
-						<div class="minititulo">
-							<h3>Assunto</h3>
+							<a href="#curso">Curso</a>
+							<h5 class="textoInline">|</h5>
+							<a href="#disciplina">Disciplina</a>
+							<h5 class="textoInline">|</h5>
+							<a href="#assunto">Assunto</a>
+							<h5 class="textoInline">|</h5>
+							<a href="#exercicio">Exercício</a>
 						</div>
-						<form class="cadastro">
-							<div class="textoForm">
-								<h5 class="textoInline">Nome:</h5>
-							</div><input type="text" class="campo" name="assunto">
-							<br>
-							<div class="textoForm">
-								<h5 class="textoInline">Disciplina:</h5>
+					</div>
+					<div class="row" id="curso">
+						<div class="col-md-8">
+							<div class="minititulo">
+								<h3>Curso</h3>
 							</div>
-							<select class="campo" name="disciplina" form="cadastro">
-								<option value="ingles">Inglês</option>
-								<option value="alg">Algoritmos</option>
-							</select>
-						</form>
-					</div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
-						<input type="submit" name="botao" value="Criar" class="botao">
-					</div>
-				</div>
-				<hr>
-				<div class="row" id="exercicio">
-					<div class="col-md-8">
-						<div class="minititulo">
-							<h3>Exercício</h3>
+							<form class="cadastro">
+								<div class="textoForm">
+									<h5 class="textoInline">Nome:</h5>
+								</div><input type="text" class="campo" name="curso">
+								<br>
+								<div class="textoForm">
+									<h5 class="textoInline">Instituição:</h5>
+								</div><input type="text" class="campo" name="lugar">
+							</form>
 						</div>
-						<form class="cadastro">
-							<div class="textoForm">
-								<h5 class="textoInline">Enunciado:</h5>
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<input type="submit" name="botao" value="Criar" class="botao">
+						</div>
+					</div>
+					<hr>
+					<div class="row" id="disciplina">
+						<div class="col-md-8">
+							<div class="minititulo">
+								<h3>Disciplina</h3>
 							</div>
-							<textarea rows="6" cols="50" class="campo" form="cadastro" name="enunciado"></textarea>
-							<br>
-							<div class="textoForm">
-								<h5 class="textoInline">a)</h5>
-							</div><input type="text" class="campo" name="a">
-							<br>
-							<div class="textoForm">
-								<h5 class="textoInline">b)</h5>
-							</div><input type="text" class="campo" name="b">
-							<br>
-							<div class="textoForm">
-								<h5 class="textoInline">c)</h5>
-							</div><input type="text" class="campo" name="c">
-							<br>
-							<div class="textoForm">
-								<h5 class="textoInline">d)</h5>
-							</div><input type="text" class="campo" name="d">
-						</form>
+							<form class="cadastro">
+								<div class="textoForm">
+									<h5 class="textoInline">Nome:</h5>
+								</div><input type="text" class="campo" name="disciplina">
+								<br>
+								<div class="textoForm">
+									<h5 class="textoInline">Curso:</h5>
+								</div>
+								<select class="campo" name="curso" form="cadastro">
+									<option value="tads">TADS</option>
+									<option value="letras">Letras</option>
+								</select>
+							</form>
+						</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<input type="submit" name="botao" value="Criar" class="botao">
+						</div>
 					</div>
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
-						<input type="submit" name="botao" value="Criar" class="botao">
+					<hr>
+					<div class="row" id="assunto">
+						<div class="col-md-8">
+							<div class="minititulo">
+								<h3>Assunto</h3>
+							</div>
+							<form class="cadastro">
+								<div class="textoForm">
+									<h5 class="textoInline">Nome:</h5>
+								</div><input type="text" class="campo" name="assunto">
+								<br>
+								<div class="textoForm">
+									<h5 class="textoInline">Disciplina:</h5>
+								</div>
+								<select class="campo" name="disciplina" form="cadastro">
+									<option value="ingles">Inglês</option>
+									<option value="alg">Algoritmos</option>
+								</select>
+							</form>
+						</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<input type="submit" name="botao" value="Criar" class="botao">
+						</div>
 					</div>
+					<hr>
+					<div class="row" id="exercicio">
+						<div class="col-md-8">
+							<div class="minititulo">
+								<h3>Exercício</h3>
+							</div>
+							<form class="cadastro">
+								<div class="textoForm">
+									<h5 class="textoInline">Enunciado:</h5>
+								</div>
+								<textarea rows="6" cols="50" class="campo" form="cadastro" name="enunciado"></textarea>
+								<br>
+								<div class="textoForm">
+									<h5 class="textoInline">a)</h5>
+								</div><input type="text" class="campo" name="a">
+								<br>
+								<div class="textoForm">
+									<h5 class="textoInline">b)</h5>
+								</div><input type="text" class="campo" name="b">
+								<br>
+								<div class="textoForm">
+									<h5 class="textoInline">c)</h5>
+								</div><input type="text" class="campo" name="c">
+								<br>
+								<div class="textoForm">
+									<h5 class="textoInline">d)</h5>
+								</div><input type="text" class="campo" name="d">
+							</form>
+						</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<input type="submit" name="botao" value="Criar" class="botao">
+						</div>
+					</div>
+					<hr>					
 				</div>
-				<hr>
 			</div>
 		</div>
 	</body>
