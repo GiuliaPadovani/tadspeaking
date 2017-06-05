@@ -224,3 +224,10 @@ hr {
 .cadastrar, .populares {
 	background-color: #e6e6e6;
 }
+
+.caixaBordaRoxa{
+	border: 0.1em solid #8c3265;
+    padding: 1em;
+    margin: 3em;
+
+}
