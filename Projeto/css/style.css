@@ -13,6 +13,7 @@
 
 body {
 	font-family: OpenSans;
+	background-color: #e6e6e6;
 }
 
 .formularioLogin {
@@ -27,6 +28,10 @@ body {
 	padding: 0 5% 10% 5%;
 }
 
+.margin12 {
+	margin-top: 12em;
+}
+
 /*usar para qualquer subtitulo*/
 .subtitulo {
 	font-family: OpenSans;
@@ -36,6 +41,12 @@ body {
 	margin-top: 10%;
 }
 
+.quemSomos {
+	font-family: OpenSans;
+	font-weight: 800;
+	color: #8c3265;
+	margin: 5%;
+}
 .login {
 	margin-top: 10%;
 }
@@ -229,5 +240,4 @@ hr {
 	border: 0.1em solid #8c3265;
     padding: 1em;
     margin: 3em;
-
 }
