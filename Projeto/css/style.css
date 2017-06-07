@@ -190,8 +190,8 @@ hr {
 	margin-top: 4%;
 }
 
-.ex, .options {
-	margin-top: 1%;
+.ex {
+	margin-top: 3%;
 }
 
 .author {
@@ -203,8 +203,21 @@ hr {
 	transition: all 0.5s;
 }
 
+
 .icon:hover {
 	font-size: 20px;
+}
+
+.like:hover {
+	color: green;
+}
+
+.dislike:hover {
+	color: red;
+}
+
+.add:hover {
+	color: #000099;
 }
 
 .acertos {
@@ -224,4 +237,8 @@ hr {
 
 .cadastrar, .populares {
 	background-color: #e6e6e6;
+}
+
+.meus .botao{
+	background-color: #5AAD5A;
 }
