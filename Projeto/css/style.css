@@ -255,6 +255,57 @@ hr {
 
 .caixaBordaRoxa{
 	border: 0.1em solid #8c3265;
-    padding: 1em;
-    margin: 3em;
+    	padding: 1em;
+    	margin: 3em;
 }
+
+/*------ Feed -----*/
+
+.page-admin {
+	padding:0 !important;
+}
+
+.nome-previa-perfil {
+	margin-bottom:10px;
+	padding: 0 !important;
+	border-bottom: 1.5px solid #8c3265;
+	text-align: center;
+	width: 280px;
+	position:relative;
+	left:30px;
+}
+
+.nome-previa-perfil h3 {
+	color:#8c3265;
+}
+.profile-pic img {
+	width:200px;
+	height:203px;
+	position:relative;
+	left:65px;
+}
+
+.links-home {
+	position:relative;
+	left:30px;
+}
+
+.previa-perfil {
+	background-color: #E6E6E6;
+	padding-top:8%;
+	padding-bottom:16.4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
