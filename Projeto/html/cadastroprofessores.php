@@ -53,35 +53,38 @@
               <!--a tag para fazer esse risco é a <hr>-->
             </div>
           </div>
-        <form action="../php/insert_professores.php">
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" class="campo campoLogin" id="nome" placeholder="Jacinto Pinto" value="nome">
+          <div class="row cadastroProfessores">
+              <form action="../php/insert_professores.php" method="post">
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="campo campoLogin" id="nome" placeholder="Jacinto Pinto" name="nome">
+                </div>
+                <div class="form-group">
+                  <label for="usuario">Usuario</label>
+                  <input type="text" class="campo campoLogin" id="user" placeholder="Jacinto Pinto" name="user">
+                </div>
+                <div class="form-group">
+                  <label for="instituicao">Instituição</label>
+                  <input type="text" name="instituicao" id="curso" class="campo campoLogin">
+                  <!--<select name="curso" id="curso" class="campo campoLogin" >
+                  <option id="tads">UFPR</option>-->
+                  </select><br>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="campo campoLogin" id="email" placeholder="Email"  name="email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Senha</label>
+                  <input type="password" class="campo campoLogin" id="senha" placeholder="Password" name="senha">
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="adm"> Administrador</label>
+                </div>
+                <button type="submit" class="botao" value="cadastrar" name="cadastrar">Cadastrar</button>
+            </div>
+            </form>
           </div>
-          <div class="form-group">
-            <label for="usuario">Usuario</label>
-            <input type="text" class="campo campoLogin" id="user" placeholder="Jacinto Pinto" value="user">
-          </div>
-          <div class="form-group">
-            <label for="instituicao">Instituição</label>
-            <select name="curso" id="curso" class="campo campoLogin" value="instituicao">
-            <option id="tads">UFPR</option>
-            </select><br>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="campo campoLogin" id="email" placeholder="Email"  value="email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-            <input type="password" class="campo campoLogin" id="senha" placeholder="Password" value="senha">
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" value="adm"> Administrador</label>
-          </div>
-          <button type="submit" class="botao" value="cadastrar">Cadastrar</button>
-      </div>
-      </form>
     </div>
   </div>
 
