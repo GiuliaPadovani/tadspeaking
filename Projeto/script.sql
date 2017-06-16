@@ -1,12 +1,13 @@
 CREATE DATABASE tadspeaking;
 
-CREATE TABLE Professor (
+CREATE TABLE Professores (
 	nome VARCHAR(20),
 	usuario VARCHAR(20),
 	senha VARCHAR(20),
-	registro INT PRIMARY KEY AUTO_INCREMENT,
-	dataRegistro DATETIME,
+	registro VARCHAR(20) PRIMARY KEY,
+	dataRegistro VARCHAR(50),
 	administrador Boolean,
+	dataCriacao VARCHAR(20),
 	instituicao VARCHAR(50)
-);
+)
 
