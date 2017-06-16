@@ -81,7 +81,7 @@
                 <div class="checkbox">
                   <label><input type="checkbox" name="adm"> Administrador</label>
                 </div>
-                <button type="submit" class="botao" value="cadastrar">Cadastrar</button>
+                <button type="submit" class="botao" value="cadastrar" name="cadastrar">Cadastrar</button>
             </div>
             </form>
           </div>

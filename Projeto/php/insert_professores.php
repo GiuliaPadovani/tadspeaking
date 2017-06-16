@@ -1,38 +1,41 @@
 <?php
+	//-------------------------Faz cadastro dos Professores-------------------------
 
-include 'lib/sanitize.php'; //checa o que o usuario mandou, tira espaços
-require_once "lib/credentials.php";
+	include 'lib/sanitize.php'; 
+	require_once "lib/credentials.php";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
 
-$table='Professores';
+	if ($_SERVER['REQUEST_METHOD']=="POST"){
+		if(isset($_POST['cadastrar'])){
+			$nome=sanitize($_POST["nome"]);
+			$user=sanitize($_POST["user"]);
+			$instituicao=sanitize($_POST["instituicao"]);
+			$email=sanitize($_POST["email"]);
+			$senha=sanitize($_POST["senha"]);
+			$adm=sanitize($_POST["adm"]);
+			$data_registro=date("Y-m-d H:i:s");
+			$email=sanitize($_POST["emai"]);
 
-if ($_SERVER["REQUEST_METHOD"]=="POST"){
-	if(isset($_POST['cadastrar'])){
-		$nome=$_POST['nome'];
-		$email=sanitize($_POST['email']);
-		$user=sanitize($_POST['user']);
-		$instituicao=$_POST['instituicao'];
-		$senha=sanitize($_POST['senha']);
-		$adm=$_POST['adm'];
-		$data_registro = date("Y-m-d H:i:s");
+			$sql = "INSERT INTO Professor (nome, usuario, senha, registro, dataRegistro, administrador, instituicao, email)
+					VALUES ('$nome', '$user', '$senha', '', '$data_registro', '$adm', '$instituicao', '$email')";
+			
+			$status = mysqli_query($conn, $sql);
 
-		$sql = "INSERT INTO $table (nome, usuario, senha, registro, dataRegistro, administrador, instituicao)
-				VALUES ('$nome', '$usuario', '$senha', '$data_registro' ,'$adm', '$instituicao')";
+			if($status){
+				$link = "../html/cadastroprofessores.php";
+				header('Location:'.$link);
+			}
 
-		$erro=mysqli_query($conn, $sql);
-
-		echo $erro;
-
-		if (!$erro) {
-			echo "Erro na inserção.";
+			if (!$status) {
+			  die('Problemas para inserir no BD!');
+			}
 		}
 	}
-}	
 
 ?>
