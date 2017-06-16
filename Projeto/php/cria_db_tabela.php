@@ -29,11 +29,28 @@ $sql = "CREATE TABLE Professor (
   usuario VARCHAR(20),
   senha VARCHAR(20),
   email VARCHAR(255),
-  registro VARCHAR(20) PRIMARY KEY,
+  registro INTEGER AUTO_INCREMENT PRIMARY KEY,
   dataRegistro VARCHAR(50),
   administrador Boolean,
   dataCriacao VARCHAR(20),
   instituicao VARCHAR(50)
+);
+CREATE TABLE Questao (
+idQuestao INTEGER AUTO_INCREMENT PRIMARY KEY,
+acertos INTEGER,
+erros INTEGER,
+enunciado VARCHAR(255),
+resposta INTEGER,
+alter_a VARCHAR(255),
+alter_b VARCHAR(255),
+alter_c VARCHAR(255),
+alter_d VARCHAR(255),
+FOREIGN KEY(registro) REFERENCES Professor (registro)
+);
+CREATE TABLE Assunto (
+nome VARCHAR(255) PRIMARY KEY,
+qntdProvas INTEGER,
+qntdQuestoes INTEGER,
 )";
 
 if (mysqli_query($conn, $sql)) {
