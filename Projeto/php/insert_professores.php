@@ -28,7 +28,7 @@
 			}
 
 			if (!$status) {
-			  die('Problemas para inserir no BD!');
+			  die('Problemas para inserir no BD!'.mysqli_error($conn));
 			}
 		}
 	}
