@@ -8,6 +8,9 @@
 	</head>
 	<body>
 		<section class="container-fluid page-admin">
+			<div id="menu">
+				<?php include 'menu.php'; ?>
+			</div>
 			<div class="row">
 			<div class="col-md-3 previa-perfil">
 				<div class="row">
