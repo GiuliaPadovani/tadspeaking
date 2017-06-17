@@ -293,11 +293,22 @@ hr {
 .previa-perfil {
 	background-color: #E6E6E6;
 	padding-top:8%;
-	padding-bottom:16.4%;
 }
 
+.ultimos-exercicios {
+	background-color: #ffffff;
+}
 
+.icon-config {
+	position: relative;
+	bottom: -30px;
 
+}
+
+.icon-config i {
+	position: relative;
+	right: -250px;
+}
 
 
 
