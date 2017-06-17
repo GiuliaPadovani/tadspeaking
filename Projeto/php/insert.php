@@ -88,8 +88,8 @@
 			$sql = "SELECT id_curso FROM Curso WHERE nome = '$curso';";	
 
 			$status = mysqli_query($conn, $sql);
-
 			if (!$status) {
+				echo $status;
 			  die('Problemas para inserir no BD!');
 			}else {
 				if (mysqli_num_rows($result) > 0) {
@@ -118,13 +118,12 @@
 	/*---------------------------------cadastrar assuntos--------------------------------*/
 	if ($_SERVER['REQUEST_METHOD']=="POST"){
 		if(isset($_POST['criar_assunto'])){
-			$nome=sanitize($_POST["nome"]);
+			$nome=sanitize($_POST["assunto"]);
 			$disciplina=$_POST["disciplina"];
 
 			//busca o id_disciplina para relacionar
 			$sql = "SELECT id_disciplina FROM Disciplina WHERE nome_disciplina='$disciplina';";
-
-			$status = mysqli_query($conn, $sql);
+			$status = mysqli_query($conn, $sql);		
 
 			if (!$status) {
 			  die('Problemas para inserir no BD!');
@@ -135,8 +134,8 @@
 				 }
 			}
 
-			$sql = "INSERT INTO Assunto (nome_assunto, id_assunto, qntdQuestoes, id_disciplina)
-					VALUES ('$nome', '', '', '$id_disciplina');";
+			$sql = "INSERT INTO Assunto (nome_assunto, qntdQuestoes, id_disciplina)
+					VALUES ('$nome', 0, '$id_disciplina');";
 			
 			$status = mysqli_query($conn, $sql);
 
@@ -147,7 +146,7 @@
 			}
 
 			if (!$status) {
-			  die('Problemas para inserir no BD!');
+			  die('Problemas para inserir Assunto no BD!');
 			}
 		}
 	}

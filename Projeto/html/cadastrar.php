@@ -88,7 +88,7 @@
 									<h5 class="textoInline">Disciplina:</h5>
 								</div>
 								<select class="campo" name="disciplina">
-									<option value="ingles">Inglês</option>
+									<option value="ingles">Ingles</option>
 									<option value="alg">Algoritmos</option>
 								</select>
 						</div>
