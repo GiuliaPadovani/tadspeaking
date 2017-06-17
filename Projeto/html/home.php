@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	</head>
 	<body>
-		<?php include "menu.php" ?>
+		<?php include "menu.php"?>
 		<section class="container-fluid page-admin">
 			<div class="row">
 			<div class="col-md-3 previa-perfil">
@@ -33,11 +33,14 @@
 						}
 					?>
 				</div>
+				<div class="icon-config">
+					<a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>
 				</div>
 			</div>
 			</div>
-			<div class="col-md-9">
-				<div class="row ultimos-exercicios subtitulo center">
+			</div>
+			<div class="col-md-9 ultimos-exercicios">
+				<div class="row subtitulo center">
 					<h2>Últimos Exercícios</h2>
 				</div>
 			</div>
