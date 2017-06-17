@@ -26,6 +26,12 @@
 					<a><div>
 						<h4>Cadastrar</h4>
 					</div></a>
+					<?php
+						include "../php/check_adm.php"; 
+						if ($adm==1) {
+							echo "";
+						}
+					?>
 				</div>
 				<div class="icon-config">
 					<a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>
