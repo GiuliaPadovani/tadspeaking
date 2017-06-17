@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css"> 
   <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script src="../js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" href="../js/bootstrap.min.js"></script>
   <title>Cadatro de professores</title>
 </head>
@@ -39,7 +40,7 @@
             <li><a href="home.php">Home</a></li>
             <li><a href="exercicios_populares.php">Exercícios Populares</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
+                <a href="#" class="dropdown" data-toggle="dropdown-menu" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">TADS</a></li>
                     <li><a href="#">TCI</a></li>
