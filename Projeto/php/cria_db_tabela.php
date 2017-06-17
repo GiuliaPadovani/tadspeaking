@@ -58,7 +58,7 @@ $sql =
 
   CREATE TABLE Assunto (
     nome_assunto VARCHAR(255), 
-    id_assunto INTEGER PRIMARY KEY,
+    id_assunto INTEGER PRIMARY KEY AUTO_INCREMENT,
     qntdQuestoes INTEGER,
     id_disciplina INTEGER,
     FOREIGN KEY (id_disciplina) REFERENCES Disciplina (id_disciplina)

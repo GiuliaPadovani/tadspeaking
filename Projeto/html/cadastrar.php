@@ -88,7 +88,7 @@
 									<h5 class="textoInline">Disciplina:</h5>
 								</div>
 								<select class="campo" name="disciplina">
-									<option value="ingles">Inglês</option>
+									<option value="ingles">Ingles</option>
 									<option value="alg">Algoritmos</option>
 								</select>
 						</div>
@@ -108,23 +108,39 @@
 								<div class="textoForm">
 									<h5 class="textoInline">Enunciado:</h5>
 								</div>
-								<textarea rows="6" cols="50" class="campo" form="cadastro" name="enunciado"></textarea>
+								<textarea rows="6" cols="50" class="campo" name="enunciado"></textarea>
 								<br>
 								<div class="textoForm">
 									<h5 class="textoInline">a)</h5>
-								</div><input type="text" class="campo" name="a">
+								</div>
+								<input type="text" class="campo" name="a">
+								<label><input type="checkbox" name="resposta" value="a"></label>
 								<br>
 								<div class="textoForm">
 									<h5 class="textoInline">b)</h5>
-								</div><input type="text" class="campo" name="b">
+								</div>
+								<input type="text" class="campo" name="b">
+								<label><input type="checkbox" name="resposta" value="b"></label>
 								<br>
 								<div class="textoForm">
 									<h5 class="textoInline">c)</h5>
-								</div><input type="text" class="campo" name="c">
+								</div>
+								<input type="text" class="campo" name="c">
+								<label><input type="checkbox" name="resposta" value="c"></label>
 								<br>
 								<div class="textoForm">
 									<h5 class="textoInline">d)</h5>
-								</div><input type="text" class="campo" name="d">
+								</div>
+								<input type="text" class="campo" name="d">
+								<label><input type="checkbox" name="resposta" value="d"></label>
+								<div class="textoForm">
+									<h5 class="textoInline">Assunto:</h5>
+								</div>
+								<!--ALTERAR PARA DINAMICO-->
+								<select class="campo" name="assunto">
+									<option value="verb-to-be">Verb To Be</option>
+									<option value="alg">Algoritmos</option>
+								</select>
 						</div>
 						<div class="col-md-2"></div>
 						<div class="col-md-2">

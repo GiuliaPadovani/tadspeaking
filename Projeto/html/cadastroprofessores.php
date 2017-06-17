@@ -48,7 +48,7 @@
                   <input type="password" class="campo campoLogin" id="senha"  name="senha">
                 </div>
                 <div class="checkbox">
-                  <label><input type="checkbox" name="adm"> Administrador</label>
+                  <label><input type="checkbox" name="adm" value="1"> Administrador</label>
                 </div>
                 <button type="submit" class="botao" value="cadastrar" name="cadastrar">Cadastrar</button>
             </div>
