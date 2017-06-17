@@ -18,38 +18,7 @@
 	</script>
 </head>
 <body>
-	<!-- MENU, COPIAR PARA AS OUTRAS PÁGINAS -->
-	<header>
-		<nav class = "navbar navbar-default menu" role = "navigation">
-		   <div class = "navbar-header">
-		      <button type = "button" class = "navbar-toggle"
-		         data-toggle = "collapse" data-target = "#navbar-collapse">
-		         <span class = "sr-only">Toggle navigation</span>
-		         <span class = "icon-bar"></span>
-		         <span class = "icon-bar"></span>
-		         <span class = "icon-bar"></span>
-		      </button>
-		      <span class="logo">
-		        <img class="tads" src="../images/tads2.png">
-		      </span>
-		   </div>
-		   <div class = "collapse navbar-collapse" id = "navbar-collapse">
-		      <ul class = "nav navbar-nav navbar-right navegar">
-		        <li><a href="#">Home</a></li>
-		        <li><a href="#">Exercícios Populares</a></li>
-		        <li class="dropdown">
-		            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
-		            <!--<ul class="dropdown-menu">
-		                <li><a href="#">TADS</a></li>
-		                <li><a href="#">TCI</a></li>
-		            </ul>-->
-		        </li>
-		        <li><a href="#">LogOut</a></li>
-		      </ul>
-		   </div>
-		</nav>
-	</header>
-	<!--FIM MENU-->
+	<?php include "menu.php";?>
 	<div class="container-fluid meus">
 		<div class="row">
 			<div class="col-md-2"></div>

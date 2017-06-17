@@ -10,38 +10,7 @@
 		<script type="text/javascript" href="../js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<!-- MENU, COPIAR PARA AS OUTRAS PÁGINAS -->
-		<header>
-			<nav class = "navbar navbar-default menu" role = "navigation">
-			   <div class = "navbar-header">
-			      <button type = "button" class = "navbar-toggle"
-			         data-toggle = "collapse" data-target = "#navbar-collapse">
-			         <span class = "sr-only">Toggle navigation</span>
-			         <span class = "icon-bar"></span>
-			         <span class = "icon-bar"></span>
-			         <span class = "icon-bar"></span>
-			      </button>
-			      <a href="../html/login.html"> <span class="logo">
-		        <img class="tads" src="../images/tads2.png">
-		      </span></a>
-			   </div>
-			   <div class = "collapse navbar-collapse" id = "navbar-collapse">
-			      <ul class = "nav navbar-nav navbar-right navegar">
-			        <li><a href="#">Home</a></li>
-			        <li><a href="exercicios_populares.html">Exercícios Populares</a></li>
-			        <li class="dropdown">
-			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
-			            <!--<ul class="dropdown-menu">
-			                <li><a href="#">TADS</a></li>
-			                <li><a href="#">TCI</a></li>
-			            </ul>-->
-			        </li>
-			        <li><a href="#">LogOut</a></li>
-			      </ul>
-			   </div>
-			</nav>
-		</header>
-		<!--FIM MENU-->
+		<?php include "menu.php";?>
 		<div class="container-fluid cadastrar">
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -66,20 +35,17 @@
 							<div class="minititulo">
 								<h3>Curso</h3>
 							</div>
-							<form class="cadastro">
+							<form class="cadastro" action="../php/insert.php" method="POST">
 								<div class="textoForm">
 									<h5 class="textoInline">Nome:</h5>
 								</div><input type="text" class="campo" name="curso">
-								<br>
-								<div class="textoForm">
-									<h5 class="textoInline">Instituição:</h5>
-								</div><input type="text" class="campo" name="lugar">
+							
+						</div>
+							<div class="col-md-2"></div>
+							<div class="col-md-2">
+								<input type="submit" name="criar_curso" value="Criar" class="botao">
+							</div>
 							</form>
-						</div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2">
-							<input type="submit" name="botao" value="Criar" class="botao">
-						</div>
 					</div>
 					<hr>
 					<div class="row" id="disciplina">
@@ -87,7 +53,7 @@
 							<div class="minititulo">
 								<h3>Disciplina</h3>
 							</div>
-							<form class="cadastro">
+							<form class="cadastro" action="../php/insert.php" method="POST">
 								<div class="textoForm">
 									<h5 class="textoInline">Nome:</h5>
 								</div><input type="text" class="campo" name="disciplina">
@@ -95,16 +61,17 @@
 								<div class="textoForm">
 									<h5 class="textoInline">Curso:</h5>
 								</div>
-								<select class="campo" name="curso" form="cadastro">
+								<!--ALTERAR PARA BUSCAR CAMPOS DINAMICAMENTE-->
+								<select class="campo" name="select_curso">
 									<option value="tads">TADS</option>
 									<option value="letras">Letras</option>
 								</select>
-							</form>
 						</div>
 						<div class="col-md-2"></div>
 						<div class="col-md-2">
-							<input type="submit" name="botao" value="Criar" class="botao">
+							<input type="submit" name="criar_disciplina" value="Criar" class="botao">
 						</div>
+							</form>
 					</div>
 					<hr>
 					<div class="row" id="assunto">
@@ -112,7 +79,7 @@
 							<div class="minititulo">
 								<h3>Assunto</h3>
 							</div>
-							<form class="cadastro">
+							<form class="cadastro" action="../php/insert.php" method="POST">
 								<div class="textoForm">
 									<h5 class="textoInline">Nome:</h5>
 								</div><input type="text" class="campo" name="assunto">
@@ -120,16 +87,16 @@
 								<div class="textoForm">
 									<h5 class="textoInline">Disciplina:</h5>
 								</div>
-								<select class="campo" name="disciplina" form="cadastro">
+								<select class="campo" name="disciplina">
 									<option value="ingles">Inglês</option>
 									<option value="alg">Algoritmos</option>
 								</select>
-							</form>
 						</div>
 						<div class="col-md-2"></div>
 						<div class="col-md-2">
-							<input type="submit" name="botao" value="Criar" class="botao">
+							<input type="submit" name="criar_assunto" value="Criar" class="botao">
 						</div>
+							</form>
 					</div>
 					<hr>
 					<div class="row" id="exercicio">
@@ -137,7 +104,7 @@
 							<div class="minititulo">
 								<h3>Exercício</h3>
 							</div>
-							<form class="cadastro">
+							<form class="cadastro" action="../php/insert.php" method="POST">
 								<div class="textoForm">
 									<h5 class="textoInline">Enunciado:</h5>
 								</div>
@@ -158,12 +125,12 @@
 								<div class="textoForm">
 									<h5 class="textoInline">d)</h5>
 								</div><input type="text" class="campo" name="d">
-							</form>
 						</div>
 						<div class="col-md-2"></div>
 						<div class="col-md-2">
-							<input type="submit" name="botao" value="Criar" class="botao">
+							<input type="submit" name="criar_exercicio" value="Criar" class="botao">
 						</div>
+							</form>
 					</div>
 					<hr>					
 				</div>
