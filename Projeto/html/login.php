@@ -4,12 +4,17 @@
 	require_once "../php/lib/connection.php";
 	require "../php/authenticate.php";
 
+	function msgAlerta($msg){
+		    echo "<script>
+			alert('$msg');
+		 	</script>";
+	}
 	$error = false;
 	$senha = $user = "";
 
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	  if (isset($_POST["usuario"]) && isset($_POST["senha"])) {
+	  if (($_POST["usuario"]!="") && ($_POST["senha"]!="")) {
 	    $user = mysqli_real_escape_string($conn,$_POST["usuario"]);
 	    $senha = mysqli_real_escape_string($conn,$_POST["senha"]);
 	    $senha = md5($senha);
@@ -33,21 +38,25 @@
 	        }
 	        else {
 	          $error_msg = "Senha incorreta!";
+	          msgAlerta($error_msg);
 	          $error = true;
 	        }
 	      }
 	      else{
 	        $error_msg = "Usuário não encontrado!";
+	        msgAlerta($error_msg);
 	        $error = true;
 	      }
 	    }
 	    else {
 	      $error_msg = mysqli_error($conn);
+	      msgAlerta($error_msg);
 	      $error = true;
 	    }
 	  }
 	  else {
 	    $error_msg = "Por favor, preencha todos os dados.";
+	    msgAlerta($error_msg);
 	    $error = true;
 	  }
 	}
@@ -63,9 +72,9 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script src="../js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" href="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
-<body>
+	<body>
 		<div class="container-fluid formularioLogin">
 			<div class="row">
 				<div class="col-md-3"></div>
@@ -94,32 +103,9 @@
 									</form>
 								</div>
 							</div>
-
-							<!-- Trigger the modal with a button -->
-							<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mod">Open Modal</button>
-
-							<!-- Modal -->
-							<div id="mod" class="modal fade" role="dialog">
-							  <div class="modal-dialog">
-
-							    <!-- Modal content-->
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <button type="button" class="close" data-dismiss="modal">&times;</button>
-							        <h4 class="modal-title">Modal Header</h4>
-							      </div>
-							      <div class="modal-body">
-							        <p>Some text in the modal.</p>
-							      </div>
-							      <div class="modal-footer">
-							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							      </div>
-							    </div>
-							  </div>
 							</div>
-					</div>
 				</div>
 			</div>
 		</div>
-</body>
+	</body>
 </html>

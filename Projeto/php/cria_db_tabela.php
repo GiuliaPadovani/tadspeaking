@@ -107,6 +107,8 @@ $sql = "CREATE TABLE Questao (
     alter_d VARCHAR(255),
     registro INTEGER,
     id_assunto INTEGER,
+    likes INTEGER,
+    dislikes INTEGER,
     FOREIGN KEY(registro) REFERENCES Professor (registro),
     FOREIGN KEY (id_assunto) REFERENCES Assunto (id_assunto)
   );";
