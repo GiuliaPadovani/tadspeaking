@@ -1,3 +1,4 @@
+<?php include "menu.php";?>
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +13,6 @@
 </head>
 
 <body>
-	<?php include "menu.php";?>
 	<div class="container-fluid populares">
 		<div class="row">
 			<div class="col-md-2"></div>

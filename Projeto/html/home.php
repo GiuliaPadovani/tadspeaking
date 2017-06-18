@@ -7,6 +7,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+  		<title>TadSpeaking</title>
 	</head>
 	<body>
 		<?php include "menu.php" ?>

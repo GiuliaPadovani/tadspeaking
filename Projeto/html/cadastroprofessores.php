@@ -1,3 +1,4 @@
+<?php include "menu.php";?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,6 @@
   <title>Cadatro de professores</title>
 </head>
 <body>
-  <?php include "menu.php";?>
   <div class="container-fluid formularioLogin">
     <div class="row">
     <div class="col-md-2"></div>
