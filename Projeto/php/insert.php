@@ -174,7 +174,7 @@
 				if (mysqli_num_rows($status) > 0) {
 				  $dados = mysqli_fetch_assoc($status);
 				  $id_assunto = $dados["id_assunto"];
-				  }
+				}
 			}
 			//
 			$sql = "INSERT INTO Questao (id_questao, acertos, erros, enunciado, resposta, alter_a, alter_b, alter_c, alter_d, registro, id_assunto)
