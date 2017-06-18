@@ -30,7 +30,7 @@
 					<div class="row">
 						<div class="col-md-12 ex">
 							<?php
-								selectMeusExercicios();
+								exibeExercicios(selectMeusExercicios());
 							?>
 						</div>
 						<div class="row">

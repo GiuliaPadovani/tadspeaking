@@ -4,8 +4,10 @@
 	require_once "authenticate.php";
 
 	/*----------------------------Exibe exercícios-------------------------------------*/
-	function exibeExercicios()
+	function exibeExercicios($dados)
 	{
+		global $conn, $user_id;
+
 		if(mysqli_num_rows($dados) > 0){
 			$i=1;
 			while ($dado = mysqli_fetch_assoc($dados)){
@@ -54,11 +56,38 @@
 		if (!$dados) {
 		  die('Problemas no select.');
 		}else {
-			exibeExercicios();		
+			return $dados;		
 		}
 	}
 
+	function selectTodosExercicios()
+	{
+		global $user_id, $conn;
 
-//
+		$sql = "SELECT * FROM Questao;";
+
+		$dados = mysqli_query($conn, $sql);
+
+		if (!$dados) {
+		  die('Problemas no select.');
+		}else {
+			return $dados;		
+		}	
+	}
+
+	function selectExerciciosRecentes(){
+		global $user_id, $conn; 
+
+		$sql = "SELECT * FROM Questao ORDER BY data DESC LIMIT 5;";
+
+		$dados = mysqli_query($conn, $sql);
+
+		if (!$dados) {
+		  die('Problemas no select.');
+		}else {
+			return $dados;		
+		}
+	}
 
 ?>
+

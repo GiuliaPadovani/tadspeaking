@@ -120,6 +120,28 @@ if (mysqli_query($conn, $sql)) {
     echo "<br>Error: creating Questao database: " . mysql_error($conn);
 }
 
+$sql = "CREATE TABLE Lista (
+    nome_lista VARCHAR(255),
+    id_lista INTEGER PRIMARY KEY AUTO_INCREMENT,
+    ex1 INTEGER,
+    ex2 INTEGER,
+    ex3 INTEGER,
+    ex4 INTEGER,
+    ex5 INTEGER,
+    FOREIGN KEY (ex1) REFERENCES Questao (id_questao),
+    FOREIGN KEY (ex2) REFERENCES Questao (id_questao),
+    FOREIGN KEY (ex3) REFERENCES Questao (id_questao),
+    FOREIGN KEY (ex4) REFERENCES Questao (id_questao),
+    FOREIGN KEY (ex5) REFERENCES Questao (id_questao)
+  );";
+
+if (mysqli_query($conn, $sql)) {
+    echo "<br>Table created successfully<br>";
+} else {
+    echo "<br>Error creating Disciplina database: " . mysql_error($conn);
+}
+
+
 mysqli_close($conn);
 
 ?>

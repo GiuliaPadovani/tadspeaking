@@ -2,6 +2,7 @@
 <?php
 	require_once "../php/authenticate.php";
 	require_once "../php/check_adm.php"; 
+	require "../php/select_exercicios.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,8 +43,43 @@
 			</div>
 			</div>
 			<div class="col-md-9 ultimos-exercicios">
-				<div class="row subtitulo center">
-					<h2>Últimos Exercícios</h2>
+					<div class="row">
+						<div class="col-md-12 center">
+							<div class="subtitulo">
+								<h2>Ultimos Exercícios</h2>
+								<p class="textoInline">_______________</p><i class="fa fa-book book" aria-hidden="true"></i><p class="textoInline">_______________</p>
+							</div>
+						</div>
+					</div>
+					<div class="mostraExercicios">
+						<div class="row">
+							<div class="col-md-12 ex">
+								<?php
+									exibeExercicios(selectExerciciosRecentes());
+								?>
+							</div>
+							<div class="row">
+								<div class="col-md-12 options">
+									<span class="like"><i class="fa fa-thumbs-o-up icon like" aria-hidden="true"></i></span>
+									<span class="dislike"><i class="fa fa-thumbs-o-down icon" aria-hidden="true"></i></span>
+									<span class="add"><i class="fa fa-plus icon" aria-hidden="true"></i></span>
+									<div class="col-md-4 info">
+									<i></i>
+									</div>
+								</div>
+							</div>
+							<!--
+							<div class="col-md-2 info">
+								<i class="fa fa-check acertos" aria-hidden="true"><p class="textoInline">85</p></i>
+								<i class="fa fa-times erros" aria-hidden="true"><p class="textoInline">45</p></i>
+							</div>-->
+						</div>
+					<div class="row">
+						<div class="col-md-8"></div>
+						<div class="col-md-4">
+							<input type="submit" name="botao" value="Criar novo" class="botao">
+						</div>
+					</div>
 				</div>
 			</div>
 			</div>
