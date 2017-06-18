@@ -125,6 +125,7 @@
 			$nome=sanitize($_POST["assunto"]);
 			$disciplina=$_POST["disciplina"];
 			echo "nome:".$disciplina."<br>";
+			
 			//busca o id_disciplina para relacionar
 			$sql = "SELECT id_disciplina FROM Disciplina WHERE nome_disciplina='$disciplina';";
 			$status = mysqli_query($conn, $sql);		
