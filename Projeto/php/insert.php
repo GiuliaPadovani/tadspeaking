@@ -167,7 +167,7 @@
 			$d=sanitize($_POST["d"]);
 			$resposta=$_POST["resposta"];
 			$assunto=$_POST["assunto"];
-
+			$data=date("Y-m-d H:i:s");
 			//busca o id_disciplina para relacionar
 			$sql = "SELECT id_assunto FROM Assunto WHERE nome_assunto='$assunto';";
 
@@ -182,8 +182,8 @@
 				}
 			}
 			//
-			$sql = "INSERT INTO Questao (id_questao, acertos, erros, enunciado, resposta, alter_a, alter_b, alter_c, alter_d, registro, id_assunto, likes, dislikes)
-					VALUES ('', '', '', '$enunciado','$resposta','$a', '$b', '$c', '$d', '$user_id', '$id_assunto','', '');";
+			$sql = "INSERT INTO Questao (id_questao, acertos, erros, enunciado, resposta, alter_a, alter_b, alter_c, alter_d, registro, id_assunto, likes, dislikes, data)
+					VALUES ('', '', '', '$enunciado','$resposta','$a', '$b', '$c', '$d', '$user_id', '$id_assunto','', '', '$data');";
 
 			$status = mysqli_query($conn, $sql);
 

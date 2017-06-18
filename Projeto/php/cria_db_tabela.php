@@ -108,6 +108,7 @@ $sql = "CREATE TABLE Questao (
     id_assunto INTEGER,
     likes INTEGER,
     dislikes INTEGER,
+    data DATETIME,
     FOREIGN KEY(registro) REFERENCES Professor (registro),
     FOREIGN KEY (id_assunto) REFERENCES Assunto (id_assunto)
   );";
