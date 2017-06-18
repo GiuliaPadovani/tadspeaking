@@ -65,6 +65,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+<link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
 	<title>TadSpeaking - Login</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../css/font-awesome.min.css"><!-- icones fofos -->
