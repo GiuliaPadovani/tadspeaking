@@ -5,7 +5,7 @@
 	require_once "lib/credentials.php";
 	require_once "lib/connection.php";
 	require_once "authenticate.php";
-
+	//
 	/*---------------------------cadastrar professores-----------------------------*/
 	if ($_SERVER['REQUEST_METHOD']=="POST"){
 		if(isset($_POST['cadastrar'])){
