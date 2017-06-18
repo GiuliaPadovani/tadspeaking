@@ -1,3 +1,4 @@
+<?php require "../php/select_exercicios.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,7 @@
 					<div class="row">
 						<div class="col-md-12 ex">
 							<?php
-								include "../php/select_exercicios.php";
+								selectMeusExercicios();
 							?>
 						</div>
 						<div class="row">

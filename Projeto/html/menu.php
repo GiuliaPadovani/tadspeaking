@@ -29,7 +29,7 @@
              <span class = "icon-bar"></span>
              <span class = "icon-bar"></span>
           </button>
-          <a href="../html/login.html"> <span class="logo">
+          <a href="../html/login.php"> <span class="logo">
             <img class="tads" src="../images/tads2.png">
           </span></a>
        </div>

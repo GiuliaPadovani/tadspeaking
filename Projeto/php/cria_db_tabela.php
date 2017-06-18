@@ -29,7 +29,7 @@ if (mysqli_query($conn, $sql)) {
 // sqlto create table
 $sql = "CREATE TABLE Professor (
     nome VARCHAR(255),
-    usuario VARCHAR(255),
+    usuario VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255),
     email VARCHAR(255),
     registro INTEGER AUTO_INCREMENT PRIMARY KEY,
