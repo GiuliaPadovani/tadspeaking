@@ -25,7 +25,7 @@
 						?>
 					</div>
 				<div class="row links-home">
-					<a><div>
+					<a href="minhas_provas.php"><div>
 						<h4>Minhas listas</h4>
 					</div></a>
 					<a href="cadastrar.php"><div>
