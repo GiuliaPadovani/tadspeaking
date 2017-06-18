@@ -29,14 +29,13 @@ if (mysqli_query($conn, $sql)) {
 // sqlto create table
 $sql = "CREATE TABLE Professor (
     nome VARCHAR(255),
-    usuario VARCHAR(20),
-    senha VARCHAR(20),
+    usuario VARCHAR(255),
+    senha VARCHAR(255),
     email VARCHAR(255),
     registro INTEGER AUTO_INCREMENT PRIMARY KEY,
-    dataRegistro VARCHAR(50),
+    dataRegistro DATETIME,
     administrador Boolean,
-    dataCriacao VARCHAR(20),
-    instituicao VARCHAR(50)
+    instituicao VARCHAR(255)
   );";
 
 if (mysqli_query($conn, $sql)) {
@@ -107,6 +106,8 @@ $sql = "CREATE TABLE Questao (
     alter_d VARCHAR(255),
     registro INTEGER,
     id_assunto INTEGER,
+    likes INTEGER,
+    dislikes INTEGER,
     FOREIGN KEY(registro) REFERENCES Professor (registro),
     FOREIGN KEY (id_assunto) REFERENCES Assunto (id_assunto)
   );";

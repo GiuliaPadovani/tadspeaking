@@ -1,3 +1,9 @@
+<?php
+	require_once "../php/authenticate.php";
+	require_once "../php/check_adm.php"; 
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,7 +13,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	</head>
 	<body>
-		<?php include "menu.php"?>
+		<?php include "menu.php" ?>
 		<section class="container-fluid page-admin">
 			<div class="row">
 			<div class="col-md-3 previa-perfil">
@@ -17,19 +23,20 @@
 							<img src="../images/profile-pictures.png">
 						</div>
 					<div class="row nome-previa-perfil">
-						<h3>Master Yoda</h3>
+						<?php
+						echo "<h3>$name</h3>"
+						?>
 					</div>
 				<div class="row links-home">
 					<a><div>
 						<h4>Minhas listas</h4>
 					</div></a>
-					<a><div>
+					<a href="cadastrar.php"><div>
 						<h4>Cadastrar</h4>
 					</div></a>
 					<?php
-						include "../php/check_adm.php"; 
 						if ($adm==1) {
-							echo "";
+							echo "<a href='cadastroprofessores.php'><div><h4>Cadastrar Professores</h4></div></a>";
 						}
 					?>
 				</div>

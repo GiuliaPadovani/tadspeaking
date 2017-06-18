@@ -18,8 +18,9 @@
 			$data_registro=date("Y-m-d H:i:s");
 			$email=sanitize($_POST["email"]);
 
-			$sql = "INSERT INTO Professor (nome, usuario, senha, email, registro, dataRegistro, administrador, instituicao,likes, dislikes)
-					VALUES ('$nome', '$user', '$senha', '$email', '', '$data_registro', '$adm', '$instituicao', '', '');";
+			$sql = "INSERT INTO Professor (nome, usuario, senha, email, registro, dataRegistro, administrador, instituicao)
+					VALUES ('$nome', '$user', '$senha', '$email', '', '$data_registro', '$adm', '$instituicao');";
+
 			
 			$status = mysqli_query($conn, $sql);
 
@@ -179,9 +180,9 @@
 				  }
 			}
 			//
-			$sql = "INSERT INTO Questao (id_questao, acertos, erros, enunciado, resposta, alter_a, alter_b, alter_c, alter_d, registro, id_assunto)
-					VALUES ('', '', '', '$enunciado','$resposta','$a', '$b', '$c', '$d', '$user_id', '$id_assunto');";
-			
+			$sql = "INSERT INTO Questao (id_questao, acertos, erros, enunciado, resposta, alter_a, alter_b, alter_c, alter_d, registro, id_assunto, likes, dislikes)
+					VALUES ('', '', '', '$enunciado','$resposta','$a', '$b', '$c', '$d', '$user_id', '$id_assunto','', '');";
+
 			$status = mysqli_query($conn, $sql);
 
 			if($status){

@@ -15,8 +15,6 @@
 		if (mysqli_num_rows($status) > 0) {
 		  $dados = mysqli_fetch_assoc($status);
 		  $adm = $dados["administrador"];
-		  $link = "../html/home.php";
-		  header('Location:'.$link);
-		  }
+		}
 	}
 ?>

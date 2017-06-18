@@ -90,6 +90,7 @@
 								<select class="campo" name="disciplina">
 									<option value="ingles">Ingles</option>
 									<option value="alg">Algoritmos</option>
+									<option value="Web 1">Web 1</option>
 								</select>
 						</div>
 						<div class="col-md-2"></div>
@@ -140,6 +141,7 @@
 								<select class="campo" name="assunto">
 									<option value="verb-to-be">Verb To Be</option>
 									<option value="alg">Algoritmos</option>
+									<option value="PHP">PHP</option>
 								</select>
 						</div>
 						<div class="col-md-2"></div>
