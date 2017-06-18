@@ -2,9 +2,7 @@
 <?php
 	require_once "../php/authenticate.php";
 	require_once "../php/check_adm.php"; 
-
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>

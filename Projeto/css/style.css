@@ -1,6 +1,12 @@
+/****************************************************************************/
+/*																			*/
+/*      Style.css, feito por Giulia Padovani, Milena Araujo 				*/
+/*		e Jorge Madson para o sistema TadSpeaking							*/
+/*																			*/
+/****************************************************************************/
+
+
 /*Atenção para classes já existentes clã*/
-/*SÓ PRA VER SE VAI SUBIR*/
-/*nao to conseguindo pegar ela por css, se alguem conseguir consertar I'll be happy - Giulia*/
 @font-face {
     font-family: SweetSensation;
     src: url(../fonts/sweet-sensation/sweet-sensations.ttf);
@@ -73,6 +79,7 @@ body {
 	border-style: none;
 	box-shadow: 1px 1px 1px #8C8372;
 	transition: all 0.3s;
+	margin-top: 3%;
 }
 
 /*.login .botao {
@@ -245,18 +252,17 @@ hr {
 	box-shadow: 2px 2px 2px #ccc;
 }
 
-.cadastrar, .populares {
-	background-color: #e6e6e6;
-}
 
-.meus .botao{
-	background-color: #5AAD5A;
+.meus .botao, .populares .botao {
+    width: 40% !important;
+    background-color: #5AAD5A;
+    margin-left: 20%;
 }
 
 .caixaBordaRoxa{
 	border: 0.1em solid #8c3265;
-    	padding: 1em;
-    	margin: 3em;
+    padding: 1em;
+    margin: 3em;
 }
 
 /*------ Feed -----*/
