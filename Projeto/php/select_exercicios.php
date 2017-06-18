@@ -15,7 +15,6 @@ function exibeExercicios($dados)
     if (mysqli_num_rows($dados) > 0) {
         $i = 1;
         while ($dado = mysqli_fetch_assoc($dados)) {
-        	print_r($dado);
             $enunciado = "<h4>" . $i . "." . $dado['enunciado'] . "</h4>";
             echo $enunciado;
             $a = "<p class='textoInline choice'>a)</p><p class='textoInline'>" . $dado['alter_a'] . "</p><br>";
@@ -125,4 +124,20 @@ echo '<table class="table table-striped">';
 							}	
 						echo "</table>";
 }
+
+	function selectExerciciosRecentes(){
+		global $user_id, $conn; 
+
+		$sql = "SELECT * FROM Questao ORDER BY data DESC LIMIT 5;";
+
+		$dados = mysqli_query($conn, $sql);
+
+		if (!$dados) {
+		  die('Problemas no select.');
+		}else {
+			return $dados;		
+		}
+	}
+
 ?>
+

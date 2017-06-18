@@ -35,6 +35,12 @@
        </div>
        <div class = "collapse navbar-collapse" id = "navbar-collapse">
           <ul class = "nav navbar-nav navbar-right navegar">
+            <li>
+              <form class="buscarForm">
+                <input type="text">
+                <button><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+              </form>
+            </li>
             <li><a href="#">
               <?php
                 if ($login) {

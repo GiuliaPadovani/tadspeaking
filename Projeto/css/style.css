@@ -316,11 +316,39 @@ hr {
 	right: -250px;
 }
 
+.buscarForm {
+    background-color: #48022a;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    margin: 0 !important;
+}
 
+.buscarForm input[type=text] {
+    width: 80%;
+    height: 100%;
+    background: none;
+    border: 0;
+    outline: none;
+}
 
+.buscarForm button {
+    border: 0;
+    background: none;
+    margin-left: 10px;
+    opacity: 0.6;
+    outline: none;
+}
 
+.buscarForm button:hover {
+    opacity: 1;
+}
 
-
+.buscarForm i {
+	color: #fff;
+}
 
 
 
