@@ -1,5 +1,5 @@
 <?php
-	include "../php/select.php";
+	include "../php/select_cadastro.php";
 ?>
 <!DOCTYPE html>
 <html>

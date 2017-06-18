@@ -29,22 +29,22 @@
              <span class = "icon-bar"></span>
              <span class = "icon-bar"></span>
           </button>
-          <a href="../html/login.php"> <span class="logo">
+          <a href="../html/home.php"> <span class="logo">
             <img class="tads" src="../images/tads2.png">
           </span></a>
        </div>
        <div class = "collapse navbar-collapse" id = "navbar-collapse">
           <ul class = "nav navbar-nav navbar-right navegar">
             <li>
-              <form class="buscarForm">
-                <input type="text">
-                <button><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+              <form class="buscarForm" action="retorno_busca.php" method="post">
+                <input type="text" name="ex_buscado">
+                <button type="submit" name="buscar"><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
             </li>
             <li><a href="#">
               <?php
                 if ($login) {
-                  echo "Olá, $name!";
+                  echo "<u>".$name."</u>";
                 }
               ?>
             </a></li>
@@ -52,10 +52,6 @@
             <li><a href="exercicios_populares.php">Exercícios Populares</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown" data-toggle="dropdown-menu" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">TADS</a></li>
-                    <li><a href="#">TCI</a></li>
-                </ul>
             </li>
             <li><a href="../php/logout.php">LogOut</a></li>
           </ul>

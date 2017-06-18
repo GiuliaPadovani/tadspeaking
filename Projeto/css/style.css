@@ -121,7 +121,6 @@ body {
 
 .navegar ul {
     display: inline-block;
-    margin-top: 10px;
 }
 
 .navegar li {
@@ -142,6 +141,41 @@ body {
 .tads {
 	width: 50%;
 }
+
+.buscarForm {
+    background-color: #48022a;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    margin-top: 4%;
+}
+
+.buscarForm input[type=text] {
+    width: 80%;
+    height: 100%;
+    background: none;
+    border: 0;
+    outline: none;
+}
+
+.buscarForm button {
+    border: 0;
+    background: none;
+    margin-left: 10px;
+    opacity: 0.6;
+    outline: none;
+}
+
+.buscarForm button:hover {
+    opacity: 1;
+}
+
+.buscarForm i {
+	color: #fff;
+}
+
 /*fim menu*/
 
 /*use quanod quiser deixar qualquer bloco <p> ou <hn> como inline*/
@@ -208,7 +242,7 @@ hr {
 }
 
 .ex {
-	margin-top: 3%;
+	margin-top: 5%;
 }
 
 .author {
@@ -235,6 +269,10 @@ hr {
 
 .add:hover {
 	color: #000099;
+}
+
+a .add {
+	color: #000;
 }
 
 .acertos {
@@ -316,38 +354,12 @@ hr {
 	right: -250px;
 }
 
-.buscarForm {
-    background-color: #48022a;
-    border: 2px solid #fff;
-    border-radius: 3px;
-    width: 100%;
-    height: 30px;
-    color: #fff;
-    margin: 0 !important;
-}
 
-.buscarForm input[type=text] {
-    width: 80%;
-    height: 100%;
-    background: none;
-    border: 0;
-    outline: none;
-}
-
-.buscarForm button {
-    border: 0;
-    background: none;
-    margin-left: 10px;
-    opacity: 0.6;
-    outline: none;
-}
-
-.buscarForm button:hover {
-    opacity: 1;
-}
-
-.buscarForm i {
-	color: #fff;
+.botaoVerde {
+    width: 40% !important;
+    background-color: #5AAD5A;
+    margin-left: 20%;
+    margin-bottom: 4%;
 }
 
 
