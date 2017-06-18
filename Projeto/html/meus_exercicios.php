@@ -1,4 +1,6 @@
-<?php require "../php/select_exercicios.php"; ?>
+<?php
+	include "../php/select_exercicios.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>

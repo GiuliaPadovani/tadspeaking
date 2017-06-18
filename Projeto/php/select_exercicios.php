@@ -5,13 +5,10 @@
 
 	/*----------------------------Faz select dos exercícios---------------------------*/
 
-	function selectMeusExercicios()
-	{
+	function selectMeusExercicios(){
+		global $user_id, $conn;
 
-		GLOBAL  $user_id, $conn;
-
-		//$sql ="select * from Questao where registro="1";"
-		$sql = "select * from Questao where registro='$user_id';";
+		$sql = "SELECT * FROM Questao where registro='$user_id';";
 
 		$dados = mysqli_query($conn, $sql);
 		if (!$dados) {
@@ -51,5 +48,4 @@
 			}	
 		}
 	}
-
 ?>
