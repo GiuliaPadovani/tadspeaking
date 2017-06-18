@@ -6,6 +6,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="shortcut icon" href="../images/favicon.ico" />
+ <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+ <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+
   <link rel="stylesheet" href="../css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css"> 
   <link rel="stylesheet" type="text/css" href="../css/style.css">
