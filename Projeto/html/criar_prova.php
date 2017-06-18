@@ -1,3 +1,4 @@
+<?php require "../php/select_exercicios.php" ?>
 <!DOCTYPE html>
 <html>
 
@@ -26,44 +27,12 @@
 						</div>
 					</div>
 				</div>
-				<div>
-					<table class="table">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Questão</th>
-								<th>Tópico(Assunto)</th>
-								<th>Tipo</th>
-								<th>Confirmar</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Numbers have ...</td>
-								<td>Presnt / Past</td>
-								<td>Múltipla escolha</td>
-								<td> <input type="checkbox" aria-label="Confirmar questão"></td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>I guy go ...</td>
-								<td>Verb to be</td>
-								<td>Verdadeiro ou falso</td>
-								<td> <input type="checkbox" aria-label="Confirmar questão"></td>
-
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Somebody once told me ...</td>
-								<td>Reading</td>
-								<td>Música</td>
-								<td> <input type="checkbox" aria-label="Confirmar questão"></td>
-
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				//Formulario com
+				//nome da lista
+				//
+				<?php $resultado = selectTodosExercicios();
+					exibirTabelaComTodosExercicios($resultado);
+				?>
 				<div class="row">
 					<button class="pull-right botao">Adicionar questão</button>
 				</div>
