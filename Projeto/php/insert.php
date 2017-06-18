@@ -89,8 +89,8 @@
 			$sql = "SELECT id_curso FROM Curso WHERE nome = '$curso';";	
 
 			$status = mysqli_query($conn, $sql);
-
 			if (!$status) {
+				echo $status;
 			  die('Problemas para inserir no BD!');
 			}else {
 				if (mysqli_num_rows($status) > 0) {
@@ -120,13 +120,11 @@
 	if ($_SERVER['REQUEST_METHOD']=="POST"){
 		if(isset($_POST['criar_assunto'])){
 			$nome=sanitize($_POST["assunto"]);
-			echo "nome:".$nome."<br>";
 			$disciplina=$_POST["disciplina"];
 			echo "nome:".$disciplina."<br>";
 			//busca o id_disciplina para relacionar
 			$sql = "SELECT id_disciplina FROM Disciplina WHERE nome_disciplina='$disciplina';";
-
-			$status = mysqli_query($conn, $sql);
+			$status = mysqli_query($conn, $sql);		
 
 			if (!$status) {
 			  die('Problemas no insert.');
@@ -137,8 +135,8 @@
 				  }
 			}
 
-			$sql = "INSERT INTO Assunto (nome_assunto, id_assunto, qntdQuestoes, id_disciplina)
-					VALUES ('$nome', '', '', '$id_disciplina');";
+			$sql = "INSERT INTO Assunto (nome_assunto, qntdQuestoes, id_disciplina)
+					VALUES ('$nome', 0, '$id_disciplina');";
 			
 			$status = mysqli_query($conn, $sql);
 
@@ -149,7 +147,7 @@
 			}
 
 			if (!$status) {
-			  die('Problemas para inserir no BD!');
+			  die('Problemas para inserir Assunto no BD!');
 			}
 		}
 	}
@@ -177,7 +175,7 @@
 				if (mysqli_num_rows($status) > 0) {
 				  $dados = mysqli_fetch_assoc($status);
 				  $id_assunto = $dados["id_assunto"];
-				  }
+				}
 			}
 			//
 			$sql = "INSERT INTO Questao (id_questao, acertos, erros, enunciado, resposta, alter_a, alter_b, alter_c, alter_d, registro, id_assunto, likes, dislikes)
