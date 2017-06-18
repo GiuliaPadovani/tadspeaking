@@ -8,6 +8,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+  		<title>TadSpeaking</title>
 	</head>
 	<body>
 		<section class="container-fluid page-admin">
