@@ -62,7 +62,9 @@
 		if(isset($_POST['criar_disciplina'])){
 			
 			$nome=sanitize($_POST["disciplina"]);
-			$curso=$_POST["select_curso"];
+			$curso=$_POST["select_curso"]; //**********BUG: Não consegue pegar nomes com espaços
+			
+
 			$sql = "INSERT INTO Disciplina (nome_disciplina, id_disciplina)
 					VALUES ('$nome', '');";
 
@@ -98,6 +100,7 @@
 				  $id_curso = $dados["id_curso"];
 				 }
 			}		
+
 
 			$sql = "INSERT INTO curso_disciplina (id_disciplina, id_curso)
 					VALUES ('$id_disciplina', '$id_curso');";

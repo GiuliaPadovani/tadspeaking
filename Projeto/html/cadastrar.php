@@ -1,3 +1,6 @@
+<?php
+	include "../php/select.php";
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -39,7 +42,6 @@
 								<div class="textoForm">
 									<h5 class="textoInline">Nome:</h5>
 								</div><input type="text" class="campo" name="curso">
-							
 						</div>
 							<div class="col-md-2"></div>
 							<div class="col-md-2">
@@ -61,10 +63,17 @@
 								<div class="textoForm">
 									<h5 class="textoInline">Curso:</h5>
 								</div>
-								<!--ALTERAR PARA BUSCAR CAMPOS DINAMICAMENTE-->
 								<select class="campo" name="select_curso">
-									<option value="tads">TADS</option>
-									<option value="letras">Letras</option>
+									<?php
+										if(mysqli_num_rows($cursos) > 0){
+											while ($curso = mysqli_fetch_assoc($cursos)){
+												$output="<option value=".$curso['nome'].">".$curso['nome']."</option>";
+												echo $output;
+											}
+										}else {
+											echo "<option>Nada a mostrar</option>";
+										}
+									?>
 								</select>
 						</div>
 						<div class="col-md-2"></div>
@@ -88,9 +97,16 @@
 									<h5 class="textoInline">Disciplina:</h5>
 								</div>
 								<select class="campo" name="disciplina">
-									<option value="ingles">Ingles</option>
-									<option value="alg">Algoritmos</option>
-									<option value="Web 1">Web 1</option>
+									<?php
+										if(mysqli_num_rows($disciplinas) > 0){
+											while ($disciplina = mysqli_fetch_assoc($disciplinas)){
+												$output="<option value=".$disciplina['nome_disciplina'].">".$disciplina['nome_disciplina']."</option>";
+												echo $output;
+											}
+										}else {
+											echo "<option>Nada a mostrar</option>";
+										}
+									?>
 								</select>
 						</div>
 						<div class="col-md-2"></div>
@@ -137,11 +153,17 @@
 								<div class="textoForm">
 									<h5 class="textoInline">Assunto:</h5>
 								</div>
-								<!--ALTERAR PARA DINAMICO-->
 								<select class="campo" name="assunto">
-									<option value="verb-to-be">Verb To Be</option>
-									<option value="alg">Algoritmos</option>
-									<option value="PHP">PHP</option>
+									<?php
+										if(mysqli_num_rows($assuntos) > 0){
+											while ($assunto = mysqli_fetch_assoc($assuntos)){
+												$output="<option value=".$assunto['nome_assunto'].">".$assunto['nome_assunto']."</option>";
+												echo $output;
+											}
+										}else {
+											echo "<option>Nada a mostrar</option>";
+										}
+									?>
 								</select>
 						</div>
 						<div class="col-md-2"></div>

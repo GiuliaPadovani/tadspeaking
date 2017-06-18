@@ -1,10 +1,11 @@
 <?php
 	/*-----------Procurar cadastro adm no banco-------------*/
+	
 	require_once "lib/credentials.php";
 	require_once "lib/connection.php";
 	require_once "authenticate.php";
 
-	//busca o atributo adm
+ 	//busca o atributo adm
 	$sql = "SELECT administrador FROM Professor WHERE registro='$user_id';";
 
 	$status = mysqli_query($conn, $sql);
