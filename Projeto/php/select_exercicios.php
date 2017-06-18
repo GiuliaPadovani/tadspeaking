@@ -5,7 +5,10 @@
 
 	/*----------------------------Faz select dos exercícios---------------------------*/
 
-		$sql = "SELECT * FROM Questao;";
+	function selectMeusExercicios(){
+		global $user_id, $conn;
+
+		$sql = "SELECT * FROM Questao where registro='$user_id';";
 
 		$dados = mysqli_query($conn, $sql);
 
@@ -45,4 +48,5 @@
 				}
 			}	
 		}
+	}
 ?>
