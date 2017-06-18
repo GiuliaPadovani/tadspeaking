@@ -24,8 +24,13 @@
 						echo "<h3>$name</h3>"
 						?>
 					</div>
-				<div class="row links-home">
-					<a href="minhas_provas.php"><div>
+					<div class="row links-home">
+					<a href="meus_exercicios.php">
+					<div>
+					<h4>Meus Exercícios</h4>
+					</div></a>
+					<a href="minhas_provas.php">
+					<div>
 						<h4>Minhas listas</h4>
 					</div></a>
 					<a href="cadastrar.php"><div>
