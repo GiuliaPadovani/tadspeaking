@@ -28,22 +28,11 @@
 				</div>
 				<div class="mostraExercicios">
 					<div class="row">
-						<div class="col-md-12 ex">
+						
 							<?php
 								exibeExercicios(selectMeusExercicios());
 							?>
-						</div>
-						<div class="row">
-							<div class="col-md-12 options">
-								<span class="like"><i class="fa fa-thumbs-o-up icon like" aria-hidden="true"></i></span>
-								<span class="dislike"><i class="fa fa-thumbs-o-down icon" aria-hidden="true"></i></span>
-								<span class="add"><i class="fa fa-plus icon" aria-hidden="true"></i></span>
-								<span class="edit"><i class="fa fa-edit icon"></i></span>
-								<div class="col-md-4 info">
-								<i></i>
-								</div>
-							</div>
-						</div>
+						
 						<!--
 						<div class="col-md-2 info">
 							<i class="fa fa-check acertos" aria-hidden="true"><p class="textoInline">85</p></i>
@@ -53,7 +42,7 @@
 				<div class="row">
 					<div class="col-md-8"></div>
 					<div class="col-md-4">
-						<input type="submit" name="botao" value="Criar novo" class="botao">
+						<a href="cadastrar.php"><input type="submit" name="botao" value="Criar novo" class="botao botaoVerde"></a>
 					</div>
 				</div>
 			</div>			
