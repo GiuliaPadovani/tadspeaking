@@ -1,5 +1,8 @@
-<?php require "../php/select_exercicios.php";
+<?php
+require "../php/select_exercicios.php";
+
 include "menu.php";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,29 +25,26 @@ include "menu.php";
 				<div class="row">
 					<div class="col-md-12 center">
 						<div class="subtitulo">
-							<h2>Criar Prova</h2>
+							<h2>Criar Lista</h2>
 							<p class="textoInline">_______________</p><i class="fa fa-book book" aria-hidden="true"></i>
 							<p class="textoInline">_______________</p>
 						</div>
 					</div>
 				</div>
-				<?php $resultado = selectTodosExercicios();
-					exibirTabelaComTodosExercicios($resultado);
-				?>
 				<div class="row">
 					<div class="col-md-6">
 						<form class="cadastro" action="../php/insert.php" method="post">
 							<div class="textoForm">
 								<h5 class="textoInline">Nome:</h5>
+								<input class="campo form-group" type="text" name="nome_assunto">
 							</div>
-							<input class="campo" type="text" name="nome_assunto">
-						
-					</div>
-				</div>
-				<div class="row" style="margin-top:0.5em">
-					<input type="submit" class="pull-right botao" name="gerar_prova" value="Gerar prova">
-				</div>
 						</form>
+					</div>
+				<?php
+$resultado = selectTodosExercicios();
+exibirTabelaComTodosExercicios($resultado);
+?>
+			<input type="submit" class="pull-right botaoSempadding" name="gerar_prova" value="Gerar prova">
 			</div>
 		</div>
 	</div>

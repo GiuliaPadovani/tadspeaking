@@ -33,6 +33,10 @@
 					<div>
 						<h4>Minhas listas</h4>
 					</div></a>
+					<a href="criar_prova.php">
+					<div>
+						<h4>Criar lista</h4>
+					</div></a>
 					<a href="cadastrar.php"><div>
 						<h4>Cadastrar</h4>
 					</div></a>

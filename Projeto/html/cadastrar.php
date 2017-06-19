@@ -170,7 +170,7 @@
 						<div class="col-md-2">
 							<input type="submit" name="criar_exercicio" value="Criar" class="botao">
 						</div>
-							</form>
+					</form>
 					</div>
 					<hr>					
 				</div>
