@@ -28,9 +28,6 @@ include "menu.php";
 						</div>
 					</div>
 				</div>
-				//Formulario com
-				//nome da lista
-				//
 				<?php $resultado = selectTodosExercicios();
 					exibirTabelaComTodosExercicios($resultado);
 				?>

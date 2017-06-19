@@ -4,11 +4,6 @@ require_once "lib/connection.php";
 require_once "authenticate.php";
 
 /*----------------------------Exibe exercícios-------------------------------------*/
-
-/*-------Exemplo de uso do exibirTabelaComTodosExercicios();-----------------------*/
-//$resultado = selectTodosExercicios();
-//exibirTabelaComTodosExercicios($resultado);
-
 function exibeExercicios($dados)
 {
     global $user_id, $conn;
@@ -105,7 +100,8 @@ function exibirTabelaComTodosExercicios($dados)
 	echo "<th>Qnt Erro</th>";
 	echo "<th>Qnt Likes</th>";
 	echo "<th>Qnt Dislikes</th>";
-	echo "<th>Data de criação</th>";	
+	echo "<th>Data de criação</th>";
+	echo "<th>Add</th>";	
 	echo "</tr>";
 	$cont=0;
 	if(mysqli_num_rows($dados) > 0){
@@ -127,6 +123,7 @@ function exibirTabelaComTodosExercicios($dados)
 			$output.="<td>".$dado['likes']."</td>";
 			$output.="<td>".$dado['dislikes']."</td>";
 			$output.="<td>".$dado['data']."</td>";
+			$output.="<td><input type='checkbox' name='adicionar' value='.".$dado['id_questao']."'></td>";
 			$output.="</tr>";
 			echo $output;
 		}

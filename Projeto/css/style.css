@@ -35,7 +35,7 @@ body {
 }
 
 .margin12 {
-	margin-top: 12em;
+	margin-top: 3%;
 }
 
 /*usar para qualquer subtitulo*/
@@ -47,12 +47,17 @@ body {
 	margin-top: 10%;
 }
 
-.quemSomos {
+.quemSomosTexto {
+	font-family: OpenSans;
+	color: #646464;
+}
+
+.quemSomosTitulo {
 	font-family: OpenSans;
 	font-weight: 800;
 	color: #8c3265;
-	margin: 5%;
 }
+
 .login {
 	margin-top: 10%;
 }
