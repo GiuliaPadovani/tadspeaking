@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
                     <div class="minititulo">
                         <h3>Exercício</h3>
                     </div>
-                    <form class="cadastro" action="../php/insert.php" method="POST">
+                    <form class="cadastro" action="../php/update.php" method="POST">
                         <div class="textoForm">
                             <h5 class="textoInline">Enunciado:</h5>
                         </div>
@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
                                 }
                             ?>
                         </select>
-                        <input type="submit" name="criar_exercicio" value="Salvar" class="botao salvar botaoVerde">
+                        <button type="submit" name="editar_exercicio" value="<?php echo $id?>" class="botao salvar botaoVerde">Salvar</button>
                     </form>
                 </div>
             </div>

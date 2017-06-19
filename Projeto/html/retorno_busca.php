@@ -31,6 +31,10 @@
 						?>
 					</div>
 				<div class="row links-home">
+					<a href="meus_exercicios.php">
+					<div>
+					<h4>Meus Exercícios</h4>
+					</div></a>
 					<a><div>
 						<h4>Minhas listas</h4>
 					</div></a>

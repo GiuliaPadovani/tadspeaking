@@ -90,19 +90,20 @@ function selectTodosExercicios(){
 
 function exibirTabelaComTodosExercicios($dados)
 {
-	global $conn,$sql;
-	echo '<table class="table table-striped">';
-	echo "<tr>";
-	echo "<th>#</th>";
-	echo "<th>Questão</th>";
-	echo "<th>Assunto</th>";
-	echo "<th>Qnt Acertos</th>";
-	echo "<th>Qnt Erro</th>";
-	echo "<th>Qnt Likes</th>";
-	echo "<th>Qnt Dislikes</th>";
-	echo "<th>Data de criação</th>";
-	echo "<th>Add</th>";	
-	echo "</tr>";
+	global $conn;
+	$output='<table class="table table-striped">';
+	$output.="<tr>";
+	$output.="<th>#</th>";
+	$output.="<th>Questão</th>";
+	$output.="<th>Assunto</th>";
+	$output.="<th>Qnt Acertos</th>";
+	$output.="<th>Qnt Erro</th>";
+	$output.="<th>Qnt Likes</th>";
+	$output.="<th>Qnt Dislikes</th>";
+	$output.="<th>Data de criação</th>";
+	$output.="<th>Add</th>";	
+	$output.="</tr>";
+	echo $output;
 	$cont=0;
 	if(mysqli_num_rows($dados) > 0){
 		while ($dado = mysqli_fetch_assoc($dados)){
@@ -133,7 +134,7 @@ function exibirTabelaComTodosExercicios($dados)
 
 function selectExerciciosRecentes()
 {
-	global $user_id, $conn; 
+	global $conn; 
 
 	$sql = "SELECT * FROM Questao ORDER BY data DESC LIMIT 5;";
 
@@ -148,7 +149,7 @@ function selectExerciciosRecentes()
 
 function busca()
 {
-	global $user_id, $conn;
+	global $conn;
 	$busca=$_POST["ex_buscado"];
 	
 	$sql = "SELECT * FROM Questao WHERE enunciado LIKE '% ".$busca." %';";
@@ -162,6 +163,146 @@ function busca()
 	}
 }
 
+function selectCursos()
+{
+	global $conn; 
 
+	$sql = "SELECT * FROM Curso;";
+
+	$dados = mysqli_query($conn, $sql);
+
+	if (!$dados) {
+	  die('Problemas no select.');
+	}else {
+		return $dados;		
+	}	
+}
+
+
+function exibeTabelaCursos($dados){
+	global $conn;
+	$output='<table class="table table-striped">';
+	$output.="<tr>";
+	$output.="<th>#</th>";
+	$output.="<th>Curso</th>";
+	$output.="</tr>";
+	echo $output;
+	$cont=0;
+	if(mysqli_num_rows($dados) > 0){
+		while ($dado = mysqli_fetch_assoc($dados)){
+			$cont++;
+			$output="<tr>";
+			$output.="<th>".$cont."</th>";
+			$output.="<td><form class='textoInline' action='../html/disciplinas.php' method='post'><button type='submit' class='editar' name='curso' value='".$dado['id_curso']."'>".$dado['nome']."</button></form></td>";
+			$output.="</tr>";
+			echo $output;
+		}
+	}	
+	echo "</table>";
+}
+
+function selectDisciplinas() {
+	global $conn;
+
+	$sql = "SELECT * FROM Disciplina;";
+
+	$disciplinas = mysqli_query($conn, $sql);
+	
+	if (!$disciplinas) {
+	  die('Problemas no select.');
+	}else {
+		return $disciplinas;
+	}
+}
+
+function exibeTabelaDisciplinas($dados){
+	global $conn;
+	$output='<table class="table table-striped">';
+	$output.="<tr>";
+	$output.="<th>#</th>";
+	$output.="<th>Disciplina</th>";
+	$output.="</tr>";
+	echo $output;
+	$cont=0;
+	if(mysqli_num_rows($dados) > 0){
+		while ($dado = mysqli_fetch_assoc($dados)){
+			$cont++;
+			$output="<tr>";
+			$output.="<th>".$cont."</th>";
+			$output.="<td><form class='textoInline' action='../html/assuntos.php' method='post'><button type='submit' class='editar' name='assunto' value='".$dado['id_disciplina']."'>".$dado['nome_disciplina']."</button></form></td>";
+			$output.="</tr>";
+			echo $output;
+		}
+	}	
+	echo "</table>";
+}
+
+function exibeTabelaAssuntos($dados){
+	global $conn;
+	$output='<table class="table table-striped">';
+	$output.="<tr>";
+	$output.="<th>#</th>";
+	$output.="<th>Assunto</th>";
+	$output.="<th>Disciplina</th>";
+	$output.="</tr>";
+	echo $output;
+	$cont=0;
+	if(mysqli_num_rows($dados) > 0){
+		while ($dado = mysqli_fetch_assoc($dados)){
+			$cont++;
+			$output="<tr>";
+			$output.="<th>".$cont."</th>";
+			$output.="<td><form class='textoInline' action='../html/exercicios_assunto.php' method='post'><button type='submit' class='editar' name='assunto' value='".$dado['id_assunto']."'>".$dado['nome_assunto']."</button></form></td>";
+			
+			$sql="SELECT nome_disciplina FROM Disciplina WHERE id_disciplina='".$dado['id_disciplina']."';";
+			
+			$disciplinas = mysqli_query($conn, $sql);
+			
+			if (!$disciplinas) {
+			  die('Problemas no select.');
+			}else{
+				if (mysqli_num_rows($disciplinas) > 0) {
+				  $disciplina = mysqli_fetch_assoc($disciplinas);
+				  $nome_disciplina = $disciplina["nome_disciplina"];
+				}
+			}
+			$output.="<td>'$nome_disciplina'</td>";
+			$output.="</tr>";
+			echo $output;
+		}
+	}	
+	echo "</table>";
+}
+
+
+function selectAssuntos($id_disciplina)
+{
+	global $conn; 
+
+	$sql = "SELECT * FROM Assunto WHERE id_disciplina='$id_disciplina';";
+
+	$dados = mysqli_query($conn, $sql);
+
+	if (!$dados) {
+	  die('Problemas no select.');
+	}else {
+		return $dados;		
+	}
+}
+
+function selectExercicioAssunto($id_assunto)
+{
+	global $conn; 
+
+	$sql = "SELECT * FROM Questao WHERE id_assunto='$id_assunto';";
+
+	$dados = mysqli_query($conn, $sql);
+
+	if (!$dados) {
+	  die('Problemas no select.');
+	}else {
+		return $dados;		
+	}	
+}
 
 ?>

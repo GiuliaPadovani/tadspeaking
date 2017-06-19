@@ -188,14 +188,9 @@
 			$status = mysqli_query($conn, $sql);
 
 			if($status){
-				if($_POST['criar_exercicio']=="Criar"){
 					$link = "../html/cadastrar.php";
 					header('Location:'.$link);
 					$status=1;
-				}else{
-					$link = "../html/meus_exercicios.php";
-					header('Location:'.$link);
-				}
 			}
 
 			if (!$status) {

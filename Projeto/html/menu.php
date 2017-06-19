@@ -48,6 +48,7 @@
               ?>
             </a></li>
             <li><a href="home.php">Home</a></li>
+            <li><a href="cursos.php">Cursos</a></li>
             <li><a href="exercicios_populares.php">Exercícios Populares</a></li>
             <!--<li class="dropdown">
                 <a href="#" class="dropdown" data-toggle="dropdown-menu" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
