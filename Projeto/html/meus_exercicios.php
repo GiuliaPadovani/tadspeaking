@@ -28,7 +28,7 @@
 				</div>
 				<div class="mostraExercicios">
 					<div class="row">
-						<div class="col-md-12 ex">
+						
 							<?php
 								exibeExercicios(selectMeusExercicios());
 							?>

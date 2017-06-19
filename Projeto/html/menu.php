@@ -1,5 +1,5 @@
 <?php
-  require "../php/authenticate.php";
+  require_once "../php/authenticate.php";
 ?>
 <!DOCTYPE html>
 <html>

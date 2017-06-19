@@ -62,7 +62,7 @@
 						<div class="row">
 							<div class="col-md-12 ex">
 								<?php
-									exibeExercicios($ret);																							
+									exibeExercicios($ret);																						
 								?>
 							
 							<!--

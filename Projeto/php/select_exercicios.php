@@ -44,11 +44,15 @@ function exibeExercicios($dados)
 								<div class='col-md-12 options'>
 									<span class='like'><i class='fa fa-thumbs-o-up icon like' aria-hidden='true'></i></span>
 									<span class='dislike'><i class='fa fa-thumbs-o-down icon' aria-hidden='true'></i></span>
-									<a href='../html/criar_prova.php'><span class='add'><i class='fa fa-plus icon' aria-hidden='true'></i></span></a>
-								</div>
+									<a href='../html/criar_prova.php'><span class='add'><i class='fa fa-plus icon' aria-hidden='true'></i></span></a>";
+				if ($dado['registro']==$user_id) {
+					$output.="<form class='botao_edicao' action='../html/editExercicio.php' method='post'><button type='submit' class='editar' name='editar' value='".$dado['id_questao']."'><i class='fa fa-edit icon' aria-hidden='true'></i></button></form>";
+				}
+
+				$output.="</div>
 							</div>";
-				echo $output;
-	            
+				
+				echo $output;          
 	            $i++;
 	        }
 	    }

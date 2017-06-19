@@ -362,7 +362,17 @@ a .add {
     margin-bottom: 4%;
 }
 
+.editar {
+	border: 0;
+	background: none;
+}
 
+.botao_edicao {
+	display: inline-block;
+}
 
+.salvar {
+	width: 10% !important;
+}
 
 
