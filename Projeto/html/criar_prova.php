@@ -32,11 +32,19 @@ include "menu.php";
 					exibirTabelaComTodosExercicios($resultado);
 				?>
 				<div class="row">
-					<button class="pull-right botao">Adicionar questão</button>
+					<div class="col-md-6">
+						<form class="cadastro" action="../php/insert.php" method="post">
+							<div class="textoForm">
+								<h5 class="textoInline">Nome:</h5>
+							</div>
+							<input class="campo" type="text" name="nome_assunto">
+						
+					</div>
 				</div>
 				<div class="row" style="margin-top:0.5em">
-					<button class="pull-right botao">Gerar prova</button>
+					<input type="submit" class="pull-right botao" name="gerar_prova" value="Gerar prova">
 				</div>
+						</form>
 			</div>
 		</div>
 	</div>

@@ -204,4 +204,38 @@
 		}
 	}
 
+	/*------------------------cadastrar listas-----------------------*/
+
+	if ($_SERVER['REQUEST_METHOD']=="POST"){
+		if(isset($_POST['gerar_prova'])){
+			$i=0;
+			$ex5=null;
+			do{
+				$i++;
+				if (isset($_POST['adicionar'.$i])) {
+					if ($i==1) {
+						$ex1=$_POST['adicionar'.$i];
+					}else{
+						if ($i==2) {
+							$ex2=$_POST['adicionar'.$i];
+						}else {
+							if ($i==3) {
+								$ex3=$_POST['adicionar'.$i];
+							}else {
+								if ($i==4) {
+									$ex4=$_POST['adicionar'.$i];
+								}else {
+									if ($i==5) {
+										$ex5=$_POST['adicionar'.$i];
+									}
+								}
+							}
+						}
+					}
+					
+					echo $ex1;
+				}
+			}while($ex5==null);
+		}
+	}
 ?>

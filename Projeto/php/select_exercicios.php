@@ -123,7 +123,7 @@ function exibirTabelaComTodosExercicios($dados)
 			$output.="<td>".$dado['likes']."</td>";
 			$output.="<td>".$dado['dislikes']."</td>";
 			$output.="<td>".$dado['data']."</td>";
-			$output.="<td><input type='checkbox' name='adicionar' value='.".$dado['id_questao']."'></td>";
+			$output.="<td><input type='checkbox' name='adicionar".$cont."' value='.".$dado['id_questao']."'></td>";
 			$output.="</tr>";
 			echo $output;
 		}

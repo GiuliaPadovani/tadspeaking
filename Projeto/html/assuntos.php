@@ -25,38 +25,38 @@
 				</div>
 				<div>
 					<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Nome (Assunto)</th>
-      <th>Questões</th>
-      <th>Testes feitos</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Numbers</td>
-      <td>32</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Colors</td>
-      <td>23</td>
-      <td>41</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Verb to be</td>
-      <td>2</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
+					  <thead>
+					    <tr>
+					      <th>#</th>
+					      <th>Nome (Assunto)</th>
+					      <th>Questões</th>
+					      <th>Testes feitos</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Numbers</td>
+					      <td>32</td>
+					      <td>12</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>Colors</td>
+					      <td>23</td>
+					      <td>41</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Verb to be</td>
+					      <td>2</td>
+					      <td>4</td>
+					    </tr>
+					  </tbody>
+					</table>
 				</div>
 				<div class="row">
-				<button class="pull-right botao">Criar novo assunto</button>
+				<a href="cadastrar.php"><button class="pull-right botao">Criar novo assunto</button></a>
 				</div>
 				</div>
 			</div>			
