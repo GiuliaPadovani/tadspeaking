@@ -1,19 +1,20 @@
 <?php
 	include "../php/select_exercicios.php";
+	include "menu.php";
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>TadSpeaking - Meus Exercícios</title>
 	<meta charset="utf-8">
-	<script src="https://use.fontawesome.com/a67d3afb0f.js"></script> <!-- icones fofos -->
+
+  	<link rel="stylesheet" href="../css/font-awesome.min.css"><!-- icones fofos -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script type="text/javascript" href="../js/bootstrap.min.js"></script>
 </head>
 <body>
-	<?php include "menu.php";?>
 	<div class="container-fluid meus">
 		<div class="row">
 			<div class="col-md-2"></div>
