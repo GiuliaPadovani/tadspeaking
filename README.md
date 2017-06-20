@@ -1,4 +1,6 @@
-# tadspeaking
+![alt text]( https://github.com/GiuliaPadovani/tadspeaking/blob/master/Projeto/images/logo.png "TadSpeaking")
+
+# TadSpeaking
 Sistema de criação e compartilhamento de exercícios criado para professores. Feito para disciplina de Aplicações Web 1 e Implementação de Aplicação de Computadores do curso Análise e Desenvolvimento de Sistemas da UFPR.
 
 ## O que é o TadSpeaking?
@@ -41,5 +43,11 @@ Antes e durante a criação foram usadas diferentes metodologias e plataformas, 
 ## Documentação
 Para a documentação do sistema, foram seguidos os requisitos da disciplina de Implementação de Aplicação para Computadores, e os documentos gerados podem ser encontrados neste repositório, na pasta Documentos, além de um Documento de Requisitos mais detalhado e um documento de Identidade Visual.
 
-Mais detalhes podem ser vistos aqui: http://gitlab.tadsufpr.net.br/ti161-alexkutzke/ti161-material-2017-1/blob/master/especificacao_trab_unfinished.md
+## Ambiente de Desenvolvimento
+O ambiente de desenvolvimento do sistema foi baseado no seguinte: http://gitlab.tadsufpr.net.br/ti161-alexkutzke/ti161-material-2017-1/blob/master/aula_01.md
+
+
+
+Mais detalhes sobre o sistema podem ser vistos aqui: http://gitlab.tadsufpr.net.br/ti161-alexkutzke/ti161-material-2017-1/blob/master/especificacao_trab_unfinished.md
+
 
